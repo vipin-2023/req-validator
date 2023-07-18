@@ -17,7 +17,9 @@ npm install vipinlumos-req-validator
 const { Validator } = require('vipinlumos-req-validator');
 
 const validator = new Validator(['username', 'email', 'password']);
+``` 
 
+```js
 // body
 app.post('/example', (req, res) => {
  
@@ -34,7 +36,7 @@ app.post('/example', (req, res) => {
 
 // params
 app.get('/example/:id', (req, res) => {
-  
+
    const isValid = validator.validateRequestParams(req);
 
   if (!isValid) {
