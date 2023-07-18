@@ -16,36 +16,32 @@ npm install vipinlumos-req-validator
 ```js
 const { Validator } = require('vipinlumos-req-validator');
 
-// Create an instance of the Validator class with the required fields
 const validator = new Validator(['username', 'email', 'password']);
 
-// Example usage with Express.js
+// body
 app.post('/example', (req, res) => {
-  // Validate the request body
+ 
   const isValid = validator.validateRequestBody(req);
 
   if (!isValid) {
     return res.status(400).json({ error: 'Invalid request body' });
   }
 
-  // Handle valid request
-  // ...
 });
 ``` 
 
 ```js
 
-// Example usage with Express.js to validate request parameters
+// params
+
 app.get('/example/:id', (req, res) => {
-  // Validate the request parameters
+ 
   const isValid = validator.validateRequestParams(req);
 
   if (!isValid) {
     return res.status(400).json({ error: 'Invalid request parameters' });
   }
-
-  // Handle valid request
-  // ...
+ 
 });
 ``` 
 
