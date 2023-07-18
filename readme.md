@@ -33,16 +33,15 @@ app.post('/example', (req, res) => {
 ```js
 
 // params
-
 app.get('/example/:id', (req, res) => {
- 
-  const isValid = validator.validateRequestParams(req);
+  
+   const isValid = validator.validateRequestParams(req);
 
   if (!isValid) {
     return res.status(400).json({ error: 'Invalid request parameters' });
   }
- 
-});
+
+ });
 ``` 
 
 
