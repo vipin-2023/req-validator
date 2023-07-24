@@ -1,6 +1,6 @@
-# vipinlumos-req-validator
+# loki-validator
 
-[![npm version](https://badge.fury.io/js/vipinlumos-req-validator.svg)](https://badge.fury.io/js/vipinlumos-req-validator)
+[![npm version](https://badge.fury.io/js/loki-validator.svg)](https://badge.fury.io/js/loki-validator)
 
 A simple request validator utility for validating request bodies and parameters.
 
@@ -9,12 +9,12 @@ A simple request validator utility for validating request bodies and parameters.
 You can install the package using npm:
 
 ```bash
-npm install vipinlumos-req-validator
+npm install loki-validator
 ``` 
 
 ## Usage
 ```js
-const { Validator } = require('vipinlumos-req-validator');
+const { Validator } = require('loki-validator');
 
 ``` 
 
