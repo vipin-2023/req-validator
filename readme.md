@@ -14,7 +14,7 @@ npm install loki-validator
 
 ## Usage
 ```js
-const { Validator } = require('loki-validator');
+const validator  = require('loki-validator');
 
 ``` 
 
@@ -22,8 +22,8 @@ const { Validator } = require('loki-validator');
 // body
 app.post('/example', (req, res) => {
 
-  const validator = new Validator(['username', 'email', 'password']);
-  const isValid = validator.validateRequestBody(req);
+  const validatorObj = new validator(['username', 'email', 'password']);
+  const isValid = validatorObj.validateRequestBody(req);
 
   if (!isValid) {
     return res.status(400).json({ error: 'Invalid request body' });
@@ -37,8 +37,8 @@ app.post('/example', (req, res) => {
 // params
 app.get('/example/:id/:name', (req, res) => {
 
-  const validator = new Validator(['id','name']);
-  const isValid = validator.validateRequestParams(req);
+  const validatorObj = new validator(['id','name']);
+  const isValid = validatorObj.validateRequestParams(req);
 
   if (!isValid) {
     return res.status(400).json({ error: 'Invalid request parameters' });
