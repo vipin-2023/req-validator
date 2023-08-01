@@ -21,6 +21,14 @@ class Validator {
       }
       return true;
     }
+    validateRequestQuery(req) {
+      for (const field of this.requiredFields) {
+        if (!req.query[field]) {
+          return false;
+        }
+      }
+      return true;
+    }
   }
   
   export default Validator;

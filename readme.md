@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/loki-validator.svg)](https://badge.fury.io/js/loki-validator)
 
-A simple request validator utility for validating request bodies and parameters.
+A simple request validator utility for validating request body , query and parameters.
 
 ## Installation
 
@@ -47,5 +47,19 @@ app.get('/example/:id/:name', (req, res) => {
  });
 ``` 
 
+```js
+
+// query
+app.get('/example/', (req, res) => {
+
+  const validatorObj = new validator(['search','limit','page']);
+  const isValid = validatorObj.validateRequestQuery(req);
+
+  if (!isValid) {
+    return res.status(400).json({ error: 'Invalid Query parameters' });
+  }
+
+ });
+``` 
 
 
